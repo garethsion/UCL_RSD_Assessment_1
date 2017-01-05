@@ -1,31 +1,18 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 import numpy as np
 import geopy
 from .map import Map
 
 class Greengraph(object):
     def __init__(self, start, end):
-        """ Constructor for Greengraph class
-        
-        Parameters
-        ----------
-        start: str
-            command line input argument for the source location
-        end: str
-            command line input argument for final location
-
-        """
         self.start=start
         self.end=end
         self.geocoder=geopy.geocoders.GoogleV3(domain="maps.google.co.uk")
         
     def geolocate(self, place):
-        """ """
         return self.geocoder.geocode(place, exactly_one=False)[0][1]
     
     def location_sequence(self, start,end,steps):
-        """ """
-
         # Raise an error if the input argument types do not match what is expected
         if type(start) != str:
             raise TypeError("Source should be a *string* value")
@@ -45,10 +32,8 @@ class Greengraph(object):
         return np.vstack([lats, longs]).transpose()
 
     def green_between(self, steps):
-        """ """
         return [Map(*location).count_green()
                 for location in self.location_sequence(
                     self.geolocate(self.start), 
                     self.geolocate(self.end),
                     steps)]
-

@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import numpy as np
 from io import BytesIO
 from matplotlib import image as img
