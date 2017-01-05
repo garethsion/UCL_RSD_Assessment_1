@@ -1,24 +1,16 @@
 #!/usr/bin/python
 from greengraph import Greengraph
-from nose.tools import assert_raises
+from nose.tools import assert_equal
+import yaml
+import os
+import numpy.testing as npt
 
-def test_location_sequence():
-    """ Unit tests for location_sequence"""
-    def test_location_sequence_fails_on_non_str_start():
-        with assert_raises(TypeError) as exception:
-             location_sequence(self, 1, 5)
-
-    def test_location_sequence_fails_on_non_str_end(): 
-        with test_assert_raises(TypeError) as exception:
-            location_sequence(self, 1, 5)
-
-    def test_location_sequence_fails_on_non_num_steps():
-        with assert_raises(TypeError) as exception:
-            location_sequence(self, 'London', 'Cambridge', 'Cardiff')
-
-    def test_location_sequence_fails_on_non_pos_steps():
-        with assert_raises(ValueError) as exception:
-            location_sequence(self, 'London', 'Cambridge', -1)
-
-
-
+def test_geolocate():
+    with open(os.path.join(os.path.dirname(__file__),
+                           'fixtures', 'journey.yaml')) as fixtures_file:
+        fixtures = yaml.load(fixtures_file)
+        for fixture in fixtures:
+            answer = Greengraph(**fixture)
+            assert_equal(answer.start, fixture['start'])
+            assert_equal(answer.end, fixture['end'])
+            assert_equal(answer.geocoder.domain, "maps.google.co.uk")
