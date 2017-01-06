@@ -9,13 +9,13 @@ greengraph Generates a graph of the green space between two input locations, by 
 
 * Once the package has installed, it can be used from the command line with the following command:
 	
-		greengraph --source START --destination END --step STEPS --out OUTFILE.PNG)
+		greengraph --start START --end END --steps STEPS --out OUTFILE.PNG
 
 * Optional arguments:
 	
 	--help, -h		display the help message
-	--source START		The starting location, which defaults to London
-	--destination END	The end location, which defaults to Cambridge
-	--step STEPS		Number of steps between the start and end locations. Defaults to 50
-	--out OUT.png		Filem=name to save the plot to. This saves a png to file
+	--start START		The starting location, which defaults to London
+	--end END		The end location, which defaults to Cardiff
+	--steps STEPS		Number of steps between the start and end locations. Defaults to 50
+	--out OUT.png		Filename to save the plot to. This saves a png to file
 
