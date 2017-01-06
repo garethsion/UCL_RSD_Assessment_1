@@ -8,8 +8,8 @@ from mock import Mock, patch
 
 def test_geolocate():
     with open(os.path.join(os.path.dirname(__file__),
-                           'fixtures', 'journey.yaml')) as fixtures_file:
-        fixtures = yaml.load(fixtures_file)
+                           'fixtures', 'journey.yaml')) as journey_file:
+        fixtures = yaml.load(journey_file)
         for fixture in fixtures:
             result = Greengraph(**fixture)
             assert_equal(result.start, fixture['start'])
@@ -18,8 +18,8 @@ def test_geolocate():
 
 def test_location_sequence():
     with open(os.path.join(os.path.dirname(__file__),
-                            'fixtures', 'location_sequence.yaml')) as fixtures_file:
-        fixtures = yaml.load(fixtures_file)
+                            'fixtures', 'location_sequence.yaml')) as sequence_file:
+        fixtures = yaml.load(sequence_file)
         for fixture in fixtures:
             my_graph = Greengraph('London', 'Cardiff')
             result = fixture.pop('result')
