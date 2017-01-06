@@ -50,7 +50,6 @@ def test_count_green():
         
 # Show Green is not used anywhere in the program. however, modifications needed to be made in map.py
 # to allow for testing, including having self as an argument to the function, and changing array to 
-# np.array. However, I ran out of time to fully implement a test for show_green, and so this has not 
-# been completed. 
+# np.array. However, since show_green is not used in the program, the test has not been completed. 
 
 # def test_show_green() 
