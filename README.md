@@ -12,28 +12,29 @@ For information of how to use this repository, please refer to the USAGE file.
 
 The tree of this repository is shown below:
 
-▒   CITATION.md
-▒   LICENSE.md
-▒   README.md
-▒   setup.py
-▒   USAGE.md
-▒
-▒▒▒▒greengraph
-▒   ▒   command.py
-▒   ▒   graph.py
-▒   ▒   map.py
-▒   ▒   __init__.py
-▒   ▒
-▒   ▒▒▒▒test
-▒       ▒   test_graph.py
-▒       ▒   test_map.py
-▒       ▒   __init__.py
-▒       ▒
-▒       ▒▒▒▒fixtures
-▒               journey.yaml
-▒               location_sequence.yaml
-▒               london_green.npy
-▒               london_sat.png
-▒
-▒▒▒▒scripts
+|   CITATION.md
+|   LICENSE.md
+|   README.md
+|   setup.py
+|   USAGE.md
+|
+|---greengraph
+|   |   command.py
+|   |   graph.py
+|   |   map.py
+|   |   __init__.py
+|   |
+|   |---test
+|       |   test_graph.py
+|       |   test_map.py
+|       |   __init__.py
+|       |
+|       |---fixtures
+|               journey.yaml
+|               location_sequence.yaml
+|               london_green.npy
+|               london_sat.png
+|
+|---scripts
         greengraph
+
