@@ -14,4 +14,16 @@ inputs for the start and end locations, step size for plotting, and the name of 
 
 * For information on how to cite this project, please refer to the CITATIONS file
 
+Requirements
+------------
+
+This package has been developed using Python 2.7
+
+Installation
+------------
+
+To install using pip:
+
+pip install git+https://github.com/garethsion/UCL_RSD_Assessment_1
+
 
