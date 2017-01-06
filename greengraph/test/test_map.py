@@ -48,4 +48,5 @@ def test_count_green():
         np.testing.assert_equal(Map.count_green(test_map, threshold=1.1), 
                london_greenness , "Error in Map class - count_green")
         
-  
+# Show Green is not used anywhere in the program, and so no unit test has been provided
+    
