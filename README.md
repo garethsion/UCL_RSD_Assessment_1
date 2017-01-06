@@ -37,4 +37,3 @@ The tree of this repository is shown below:
 |
 |---scripts
         greengraph
-
